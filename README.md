@@ -23,4 +23,4 @@
 - адаптивная верстка
 - файловая структура в соответствии с БЭМ (Nested)
 
-##### Демо проекта на github pages
+##### Демо проекта на github pages [Mesto](https://elenashipkova.github.io/mesto/)
