@@ -5,7 +5,7 @@ let profileName = document.querySelector(".profile__title");
 let profileJob = document.querySelector(".profile__subtitle");
 let nameInput = document.querySelector(".popup__input_type_name");
 let jobInput = document.querySelector(".popup__input_type_about");
-let formElement = document.querySelector(".popup__container");
+let formElement = document.querySelector(".popup__form");
 
 // Открывает модальное окно, заполняет его поля данными из профиля
 function openPopup() {
