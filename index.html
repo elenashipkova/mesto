@@ -19,60 +19,46 @@
   <main class="content">
 
     <section class="profile">
-      <div class="profile-avatar">
-        <img src="./images/profile_avatar.jpg" alt="Аватар профиля" class="profile-avatar__image">
-      </div>
+      <img src="./images/profile_avatar.jpg" alt="Аватар профиля" class="profile__avatar">
       <div class="profile__info">
         <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <button class="profile__button-edit"></button>
+        <button type="button" aria-label="Редактировать профиль" class="profile__button-edit"></button>
         <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <button class="profile__button-photo-add"></button>
+      <button type="button" aria-label="Добавить фото" class="profile__button-photo-add"></button>
     </section>
 
     <section class="photo-elements">
-      <ul class="photo-elements__list">
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Карачаево-Черкесия</h3>
-            <button class="photo-like"></button>
-          </div>
+      <ul class="photo-elements-list">
+        <li class="photo-card">
+          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="photo-card__image">
+          <h3 class="photo-card__title">Карачаево-Черкесия</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/elbrus.jpg" alt="Эльбрус" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Гора Эльбрус</h3>
-            <button class="photo-like"></button>
-          </div>
+        <li class="photo-card">
+          <img src="./images/elbrus.jpg" alt="Эльбрус" class="photo-card__image">
+          <h3 class="photo-card__title">Гора Эльбрус</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/dombay.jpg" alt="Домбай" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Домбай</h3>
-            <button class="photo-like"></button>
-          </div>
+        <li class="photo-card">
+          <img src="./images/dombay.jpg" alt="Домбай" class="photo-card__image">
+          <h3 class="photo-card__title">Домбай</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/rotonda-min-min.jpg" alt="Ротонда" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Ротонда</h3>
-            <button class="photo-like"></button>
-          </div>
+        <li class="photo-card">
+          <img src="./images/rotonda-min-min.jpg" alt="Ротонда" class="photo-card__image">
+          <h3 class="photo-card__title">Ротонда</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/lagoon-min-min.jpg" alt="Красивая лагуна" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Красивая лагуна</h3>
-            <button class="photo-like"></button>
-          </div>
+        <li class="photo-card">
+          <img src="./images/lagoon-min-min.jpg" alt="Красивая лагуна" class="photo-card__image">
+          <h3 class="photo-card__title">Красивая лагуна</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
-        <li>
-          <div class="photo-elements__list-item">
-            <img src="./images/venezia-min-min.jpg" alt="Венеция" class="photo-elements__list-img">
-            <h3 class="photo-elements__list-title">Венеция</h3>
-            <button class="photo-like"></button>
-          </div>
+        <li class="photo-card">
+          <img src="./images/venezia-min-min.jpg" alt="Венеция" class="photo-card__image">
+          <h3 class="photo-card__title">Венеция</h3>
+          <button type="button" class="photo-card__like-btn"></button>
         </li>
       </ul>
     </section>
@@ -83,16 +69,18 @@
     <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
   </footer>
 
-  <section class="popup">
-    <form class="popup__container">
-      <h3 class="popup__title">Редактировать профиль</h3>
-      <input type="text" id="name" class="popup__input popup__input_name">
-      <input type="text" id="about" class="popup__input popup__input_about">
-      <button type="submit" class="popup__save-button">Сохранить</button>
-      <button type="button" class="popup__close-button"></button>
-    </form>
-  </section>
+  <div class="popup">
+    <div class="popup__container">
+      <form class="popup__form" name="profile-edit-form">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" id="name" class="popup__input popup__input_type_name" name="profile-name">
+        <input type="text" id="about" class="popup__input popup__input_type_about" name="profile-about">
+        <button type="submit" aria-label="Сохранить введенные изменения" class="popup__save-button">Сохранить</button>
+        <button type="button" aria-label="Закрыть без сохранения" class="popup__close-button"></button>
+      </form>
+    </div>
+  </div>
 
-  <script src="./script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

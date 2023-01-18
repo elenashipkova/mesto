@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 905px) {
   .profile {
     width: calc(100% - 2 * 19px);
   }

@@ -1,7 +1,4 @@
-.photo-elements__list-item {
-  /* max-width: 282px;
-  min-height: 361px;
-  width: 100%;  */
+.photo-card {
   display: grid;
   grid-template-columns: minmax(240px, 880px) auto;
   grid-template-rows: auto 79px;

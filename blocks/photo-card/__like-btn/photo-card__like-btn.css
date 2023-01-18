@@ -1,5 +1,5 @@
-.photo-like {
-  background-image: url(../../images/like-button.svg);
+.photo-card__like-btn {
+  background-image: url(../../../images/like-button.svg);
   background-color: white;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,6 +13,6 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.photo-like:hover {
+.photo-elements__like-btn:hover {
   opacity: 0.5;
 }

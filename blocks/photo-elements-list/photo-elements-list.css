@@ -1,4 +1,4 @@
-.photo-elements__list {
+.photo-elements-list {
   list-style: none;
   display: grid;
   width: 100%;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 880px) {
-  .photo-elements__list {
+  .photo-elements-list {
     gap: 20px 12px;
   }
 }

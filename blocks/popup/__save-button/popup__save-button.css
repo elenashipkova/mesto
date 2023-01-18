@@ -4,7 +4,7 @@
   width: 358px;
   height: 50px;
   display: block;
-  margin-top: 48px;
+  margin-top: 49px;
   padding: 0;
   font-style: normal;
   font-weight: 400;
@@ -14,6 +14,7 @@
   color: #FFFFFF;
   cursor: pointer;
   transition: opacity 0.5s ease-in-out;
+  border: none;
 }
 
 .popup__save-button:hover {
@@ -25,5 +26,7 @@
     width: 238px;
     height: 46px;
     margin-top: 45px;
+    font-size: 14px;
+    line-height: 1.21;
   }
 }
