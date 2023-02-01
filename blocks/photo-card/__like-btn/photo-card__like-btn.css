@@ -13,6 +13,6 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.photo-elements__like-btn:hover {
+.photo-card__like-btn:hover {
   opacity: 0.5;
 }
