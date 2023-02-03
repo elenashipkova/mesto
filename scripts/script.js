@@ -105,13 +105,6 @@ function openProfileEditForm() {
   jobInput.value = profileJob.textContent;
 };
 
-// Без этой функции попап с формой новой карточки открывается один раз автоматически при загрузке страницы
-// после его закрытия, по клику на "плюсик" уже больше не открывается
-function openCardPopupReset (evt) {
-  openPopup(photoAddPopup);
-  evt.target.reset();
-};
-
 /* Обработчик формы редактирования профиля
 Вставляет введенные в input-ах значения в соответствующие поля профиля
 Закрывает модальное окно редактирования профайла
@@ -138,7 +131,7 @@ function handleCardFormSubmit (evt) {
 // Обработчики событий
 profileEditBtn.addEventListener("click", openProfileEditForm);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
-photoAddBtn.addEventListener("click", openCardPopupReset);
+photoAddBtn.addEventListener("click", () => openPopup(photoAddPopup));
 photoAddForm.addEventListener("submit", handleCardFormSubmit);
 closeButtons.forEach((button) => {
   const popup = button.closest(".popup");

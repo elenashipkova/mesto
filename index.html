@@ -52,8 +52,8 @@
     <div class="popup__container">
       <form class="popup__form" name="profile-edit-form">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" id="name" class="popup__input popup__input_type_name" name="profile-name">
-        <input type="text" id="about" class="popup__input popup__input_type_about" name="profile-about">
+        <input type="text" id="name" class="popup__input popup__input_type_name" name="profile-name" required>
+        <input type="text" id="about" class="popup__input popup__input_type_about" name="profile-about" required>
         <button type="submit" aria-label="Сохранить введенные изменения" class="popup__save-button">Сохранить</button>
         <button type="button" aria-label="Закрыть без сохранения" class="popup__close-button edit-profile-btn"></button>
       </form>
@@ -64,8 +64,8 @@
     <div class="popup__container">
       <form class="popup__form photo-add-form" name="photo-add-form">
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" id="title" class="popup__input popup__input_type_title" name="photo-title" placeholder="Название">
-        <input type="text" id="link" class="popup__input popup__input_type_link" name="photo-link" placeholder="Ссылка на картинку">
+        <input type="text" id="title" class="popup__input popup__input_type_title" name="photo-title" placeholder="Название" required>
+        <input type="text" id="link" class="popup__input popup__input_type_link" name="photo-link" placeholder="Ссылка на картинку"required>
         <button type="submit" aria-label="Создать" class="popup__save-button photo-create-btn">Создать</button>
         <button type="button" aria-label="Закрыть без сохранения" class="popup__close-button photo-add-cls"></button>
       </form>
