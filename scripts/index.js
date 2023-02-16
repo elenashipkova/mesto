@@ -17,6 +17,8 @@ const photoViewPopup = document.querySelector(".photo-view");
 const imageCaption = document.querySelector(".photo-view__caption");
 const photoViewImg = document.querySelector(".photo-view__image");
 const closeButtons = document.querySelectorAll(".popup__close-button");
+//Все попапы
+const popupForms = document.querySelectorAll('.popup');
 // Элементы template карточки
 const cardList = document.querySelector(".photo-elements-list");
 const cardTemplate = document.querySelector(".photo-elements__template").content.querySelector(".photo-card");
@@ -46,7 +48,7 @@ const initialCards = [
     name: 'Сакура',
     link: 'https://images.unsplash.com/photo-1611053571700-93bc64a26af9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1585&q=80'
   }
-];  
+];
 
 /* Возвращает шаблон карточки
 Удаляет карточку по клику на кнопку удаления
@@ -91,12 +93,22 @@ renderCards(initialCards);
 // Открытие попапов
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener("keydown", closePopupEscape);
 };
 
 // Закрытие попапов
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closePopupEscape);
 };
+
+// Закрытие попапов при нажатии на Esc
+function closePopupEscape (evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
+  }
+}
 
 // Открывает модальное окно редактирования профиля, заполняет его поля данными из профиля
 function openProfileEditForm() {
@@ -133,7 +145,16 @@ profileEditBtn.addEventListener("click", openProfileEditForm);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 photoAddBtn.addEventListener("click", () => openPopup(photoAddPopup));
 photoAddForm.addEventListener("submit", handleCardFormSubmit);
+
 closeButtons.forEach((button) => {
   const popup = button.closest(".popup");
   button.addEventListener("click", () => closePopup(popup));
+});
+
+popupForms.forEach((popup) => {
+  popup.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("popup_opened")) {
+      evt.target.classList.remove("popup_opened");
+    }
+  });
 });
